@@ -13,10 +13,10 @@ Template.postSubmit.events({
         return alert(error.reason);
       
       // show this result but route anyway
-      if (resutl.postExists)
+      if (result.postExists)
         alert('This link has already been posted');
       
-      Router.go('postPage', post);
+      Router.go('postPage', {_id: result._id});
     });
   }
 });
