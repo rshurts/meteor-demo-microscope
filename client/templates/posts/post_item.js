@@ -1,8 +1,6 @@
 Template.postItem.helpers({
   ownPost: function() {
-    var owned = this.userId === Meteor.userId();
-    console.log(owned);
-    return owned;
+    return this.userId === Meteor.userId();
   },
   domain: function() {
     var a = document.createElement('a');
